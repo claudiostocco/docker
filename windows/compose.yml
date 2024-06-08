@@ -19,8 +19,7 @@ services:
       RAN_SIZE: "8G"
       CPU_CORES: "8"
       USERNAME: "claudio"
-      PASSWAORD: "ffrdga"
+      PASSWORD: "ffrdga"
     volumes:
-      - /data:/storage2
       - /home/claudio/Public:/shared
     
