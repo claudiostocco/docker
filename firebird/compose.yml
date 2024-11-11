@@ -1,0 +1,12 @@
+services:
+  windows:
+    image: jacobalberty/firebird:v5
+    container_name: Firebird_5
+    ports:
+      - 32050:3050/tcp
+    environment:
+      ISC_PASSWORD: "masterkey"
+    volumes:
+      - /data/docker/firebird/data/:/firebird/data
+      - /data/docker/firebird/restore:/firebird/restore
+    
