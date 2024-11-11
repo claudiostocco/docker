@@ -1,0 +1,25 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    stop_grace_period: 2m
+    environment:
+      VERSION: "win11"
+      REGION: "pt-BR"
+      KEYBOARD: "pt-BR"
+      DISK_SIZE: "128G"
+      RAN_SIZE: "8G"
+      CPU_CORES: "8"
+      USERNAME: "user"
+      PASSWORD: "pass"
+    volumes:
+      - /home/claudio/Public:/shared
+    
